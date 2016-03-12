@@ -1,0 +1,23 @@
+Gravar em um outro arquivo "maior.txt" o maior numero armazenado no "sequencia.txt"
+==================================================================================
+Gravar em um outro arquivo "menor.txt" o menor numero armazenado no "sequencia.txt"
+==================================================================================
+Gravar em um outro arquivo "sequencia_inversa.txt" a lista inversa da sequencia numerica contida no arquivo "sequencia.txt"
+==================================================================================
+Criar um aplicativo de cadastro de clientes. Cada cliente possui: id;nome;endereco;
+- Deverá ser possível alterar, adicionar, excluir e criar.
+- Grave no arquivo "log.txt" as ações realizadas no sistema
+======================================================================================
+Em um arquivo possui uma matriz. Grave em outro arquivo a matriz transposta.
+==================================================================================
+Em arquivo que possui uma sequência de numeros grave ao final do mesmo arquivo o resultado da soma dessa sequência. 
+================================================
+A partir de um texto, quebre nos espaços e crie, para cada palavra, um arquivo armazenando tal palavra.
+Ex: Igor Avila Pereira => arquivo.txt
+Resultado: palavra1.txt (contendo a palavra Igor), palavra2.txt (contendo a palavra Avila), palavra3.txt (contendo a palavra Pereira)
+================================================================================
+Faça um programa que leia o nome e sobrenome de 30 alunos e armazene em um arquivo, de tal forma que o
+arquivo tenha um aluno por linha. 
+=========================================================================
+Faça um programa que leia um vetor de inteiros A de tamanho 20 e guarde seus valores em um arquivo, um por
+linha. Em seguida, reabra o arquivo e leia os elementos para o vetor B, verificando se os valores foram gravados corretamente
