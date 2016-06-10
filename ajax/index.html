@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="jquery.js"></script>		
+
+		<script>
+
+		/*
+
+		$.get("http://igoravilapereira.comlu.com/index.php", "" , function(data) {
+			//$("#divao").html(data);
+			alert(data);
+		});
+		*/
+		/*
+		$.get('http://api.steampowered.com/ISteamNews/GetNewsForApp/v0002/?appid=440&count=3&maxlength=300&format=json', function (json) {
+			console.log(json.text);
+		});	
+		$.get('http://lorem-ipsum.me/api/json', function (json) {
+			console.log(json.text);
+		});
+		
+
+
+		$.get('http://api.openweathermap.org/data/2.5/forecast/city?id=3451133&APPID=5fe682102e20c69c8b589446fcbf9c21', function (json) {
+			alert(json.name);
+		});
+		*/
+
+		$.get('http://jsonip.com', function (json) {
+			alert('The IP address is: ' + json.ip);
+		});
+
+		$.get('https://qrng.anu.edu.au/API/jsonI.php?length=1&type=uint8', function (json) {
+			//console.log('Random Number: ' + json.data);
+			$("#divao").html(json.data);
+			$("#divao").append("oi");
+		});
+	
+		// com jquery
+		$(document).ready (function(){
+			$("#jquery2").click(function(){
+				$.get("http://api.postmon.com.br/cep/96205001", function(data) {
+					// {"complemento": "de 530/531 ao fim", "bairro": "Vila Jun\u00e7\u00e3o", "cidade": "Rio Grande", "logradouro": "Avenida Presidente Vargas", "estado_info": {"area_km2": "281.731,445", "codigo_ibge": "43", "nome": "Rio Grande do Sul"}, "cep": "96202188", "cidade_info": {"area_km2": "2709,522", "codigo_ibge": "4315602"}, "estado": "RS"}
+					alert(data.logradouro);
+					//console.log(data.logradouro);
+				});
+			});
+		});
+
+		// com jquery
+		$(document).ready (function(){
+			$("#jquery").click(function(){
+				$.get("recebe.php", "parametro=Igor" , function(data) {
+					alert(data);
+					//console.log(data);
+				});
+			});
+		});
+		// com javascript puro
+		function ajax_javascript_puro() {
+		  var xhttp = new XMLHttpRequest();
+		  xhttp.onreadystatechange = function() {
+		    if (xhttp.readyState == 4 && xhttp.status == 200) {
+				alert(xhttp.responseText);
+		    }
+		  };
+
+		  //xhttp.open("GET", "http://api.steampowered.com/ISteamNews/GetNewsForApp/v0002/?appid=440&count=3&maxlength=300&format=json", true);		  
+		 xhttp.open("GET", "recebe.php?parametro=Igor", true);
+		  xhttp.send();
+		}
+
+		// com javascript puro
+		function ajax_javascript_puro2() {		  
+		  var xhttp = new XMLHttpRequest();
+		  xhttp.onreadystatechange = function() {
+		    if (xhttp.readyState == 4 && xhttp.status == 200) {
+		    	var objeto = JSON.parse(xhttp.responseText);
+				alert(objeto.logradouro);
+		    }
+		  };
+		  xhttp.open("GET", "http://api.postmon.com.br/cep/96202188", true);
+		  xhttp.send();
+		}
+		</script>
+	</head>	
+<body>
+
+<button type="button" onclick="ajax_javascript_puro()">Ajax com JavaScript Puro</button>
+<button type="button" onclick="ajax_javascript_puro2()">Ajax com JavaScript Puro (cep) </button>
+
+
+<button type="button" id="jquery">Ajax com Jquery</button>
+
+
+<button type="button" id="jquery2">Ajax com Jquery (cep) </button>
+
+
+<div id="divao">
+
+</div>
+
+</body>
+</html>
