@@ -1,0 +1,15 @@
+<!doctype html>
+<head>
+  <title>{% block title %}{% endblock %} - Flask </title>
+  <link rel=stylesheet type=text/css href="/static/styles/style.css">
+  {% block bloco_css %}{% endblock %}
+</head>
+<body>
+  <div class="page">
+    <h1>Cabeçalho</h1>
+    <div class="metanav">
+      {% block body %}{% endblock %}
+    </div>
+    <h1>Rodapé</h1>
+  </div>
+</body>
