@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %} Igor Pereira {% endblock %}
+
+{% block bloco_css %} <style> body { background-color:  blue} </style> {% endblock %}
+
+
+{% block body %}
+	{{mensagem}}.
+
+<ul>
+{% for item in vetItem %}
+	  <li><a href="{{ item }}">{{ item }}</a></li>
+{% endfor %}
+</ul>
+
+{% endblock %}
